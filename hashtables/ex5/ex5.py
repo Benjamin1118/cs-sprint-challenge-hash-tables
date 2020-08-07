@@ -7,6 +7,20 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
+    result = []
+
+
+    for i in queries:
+        for j in files:
+            if i in j:
+                result.append(j)
+        else:
+            continue
+    
+
+    #for i in queries:
+    # if paths contains(queries):
+    #   path.append(arr)
 
     return result
 
