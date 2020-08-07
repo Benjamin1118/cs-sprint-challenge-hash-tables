@@ -4,6 +4,22 @@ def intersection(arrays):
     """
     # Your code here
 
+    intersect = []
+
+    for i in arrays:
+        if i not in intersect:
+            intersect[i] = 1
+        else:
+            return
+    return intersect
+
+
+    #something like if not in cache put it in there
+    #else return and try next
+    # once it has done it with all of them run the first again
+
+
+
     return result
 
 
