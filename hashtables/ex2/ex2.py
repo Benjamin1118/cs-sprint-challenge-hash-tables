@@ -12,11 +12,12 @@ def reconstruct_trip(tickets, length):
     # Your code here
     # trip = []
     route = []
+    source = Ticket.("None")
     route.head = source
     # route.head = source
     # while destimation is not None:
     while destination is not None:
-        route.next = source.destination
+        route.next = Ticket.destination()
     #   route.next = source.destination()
     # return route
 

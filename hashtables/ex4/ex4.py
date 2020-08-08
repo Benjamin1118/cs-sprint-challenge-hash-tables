@@ -4,17 +4,32 @@ def has_negatives(a):
     """
     # Your code here
     result = []
+    index = {}
+    #grab all pos or neg
+    #loop through
+
     for i in a:
-        if (i*(-1)) in a:
-            if i > 0 and i not in result:
-                result.append(i)
-            elif (i*(-1)) > 0 and (i*(-1)) not in result: 
-                    result.append(i*(-1))
-            else:
-                continue
+        if i < 0:
+            counter = abs(i)
+            if counter in index:
+                result.append(counter)
         else:
-            continue
-    return result.sort()
+            counter = i * -1
+            if counter in index:
+                result.append(i)
+        index[i] = True
+
+    return result
+    #     if (i*(-1)) in a:
+    #         if i > 0 and i not in result:
+    #             result.append(i)
+    #         elif (i*(-1)) > 0 and (i*(-1)) not in result: 
+    #                 result.append(i*(-1))
+    #         else:
+    #             continue
+    #     else:
+    #         continue
+    # return result.sort()
 
 
         #if i * -1 == a[]

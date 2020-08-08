@@ -3,17 +3,24 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    array_count = len(arrays)
+    counter = {}
+    array_counter = {}
+    for array in arrays:
+        for i in range(len(array)):
+            if array[i] not in array_counter:
+                if array[i] in counter:
+                    counter[array[i]] +=1
+    
+                else: # if i is in intersect
+                  counter[array[i]] = 1
+        array_counter = {}
+    result = [key for (key, value) in counter.items() if value == array_count]
+    print (result)
+    return result
 
-    intersect = []
-
-    for i in arrays:
-        if i not in intersect:
-            intersect[i] = 1
-        else:
-            return
-    return intersect
-
-
+              
+    
     #something like if not in cache put it in there
     #else return and try next
     # once it has done it with all of them run the first again
